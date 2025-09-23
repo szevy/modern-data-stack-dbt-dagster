@@ -86,20 +86,12 @@ To get this project up and running:
     ```bash
     conda activate ecp
     ```
-3.  **Generate a Kaggle API key** on [Kaggle.com](https://www.kaggle.com/).
-
-4.  **Set up Google Cloud credentials** to allow access to BigQuery. Obtain your Google service account key as a JSON file from the Google Cloud IAM & Admin console.
-
-5.  **Navigate to the `scripts/` directory:**
+3.  **Generate a Kaggle API key** on [Kaggle.com](https://www.kaggle.com/). Save the Kaggle key file in `~/.kaggle/` and set the file permissions to 600 (Linux/macOS only).
     ```bash
-    cd ~/end-to-end-data-ml-pipeline-for-ecommerce-analytics/olist_ecommerce_orchestration/olist_ecommerce_orchestration/scripts
+    chmod 600 ~/.kaggle/kaggle.json
     ```
 
-6.  **Move the Kaggle and GCP service account key files** from Downloads/ to a secure project directory. Then, add them to `.gitignore` and set restrictive file permissions to protect sensitive credentials:
-    ```bash
-    move_key_file(key_type='kaggle', filename='kaggle.json', source_dir=None)
-    move_key_file(key_type='gcp', filename='gcp_service_account.json', source_dir=None)
-    ```
+4.  **Set up Google Cloud credentials** to allow access to BigQuery. Obtain your Google service account key as a JSON file from the Google Cloud IAM & Admin console. Save the GCP service account key file in a secure project directory and set the file permissions to 600 (Linux/macOS only) in your terminal.
 
 ---
 
